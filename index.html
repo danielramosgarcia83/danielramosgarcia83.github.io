@@ -6,7 +6,19 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
 </head>
+<style>
+	.container {
+		margin: 0 auto;
+		max-width: calc(100% - 4.5em);
+		width: 45em;
+	}
+</style>
 
 <body class="is-preload">
 
@@ -79,7 +91,7 @@
 			</section>
 			<section>
 				<div class="container">
-					<ul class="feature-icons" style="display: flex;und;justify-content: space-between;">
+					<ul class="feature-icons" style="display: flex;justify-content: space-between;">
 						<img style="width:10%;" src="./images/css.svg" alt="" srcset="">
 						<img style="width:10%;" src="./images/MySQL.svg" alt="" srcset="">
 						<img style="width:10%;" src="./images/php.svg" alt="" srcset="">
@@ -92,12 +104,11 @@
 					</ul>
 				</div>
 		</div>
-		</section>
 
 		<!-- Two -->
 		<section id="two">
 			<div class="container">
-				<h3>Things I Can Do</h3>
+				<h3>Cosas que puedo hacer</h3>
 				<p style="text-align: justify">Poseo conocimientos en el desarrollo de aplicaciones web dinámicas y
 					eficientes utilizando PHP. Tengo conocimientos en el manejo de bases de datos MySQL, donde he
 					trabajado en el diseño y optimización de esquemas.
@@ -105,19 +116,81 @@
 					despliegue de aplicaciones de manera eficiente mediente el levantamiento de contenedores. Además,
 					mis proyectos utilizan GitHub, aprovechando las herramientas de control de versiones para un trabajo
 					efectivo</p>
-				<ul class="feature-icons">
+				<!-- <ul class="feature-icons">
 					<li class="icon solid fa-code">Write all the code</li>
 					<li class="icon solid fa-cubes">Stack small boxes</li>
 					<li class="icon solid fa-book">Read books and stuff</li>
 					<li class="icon solid fa-coffee">Drink much coffee</li>
 					<li class="icon solid fa-bolt">Lightning bolt</li>
 					<li class="icon solid fa-users">Shadow clone technique</li>
-				</ul>
+				</ul> -->
 			</div>
 		</section>
+		</section>
+		<!-- carousel bootstrap -->
+		<section style="display:flex">
+			<div class="container">
+				<div style="display: flex;justify-content: center;">
+					<div id="carouselExampleDark" class="carousel carousel-dark slide">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+								class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+								aria-label="Slide 3"></button>
+							<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+								aria-label="Slide 4"></button>
 
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active" data-bs-interval="10000">
+								<img src="./images/container_docker.png" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<!-- <h5>First slide label</h5>
+								<p>Some representative placeholder content for the first slide.</p> -->
+								</div>
+							</div>
+							<div class="carousel-item" data-bs-interval="2000">
+								<img src="./images/repositorios_github.png" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<!-- <h5>Second slide label</h5>
+								<p>Some representative placeholder content for the second slide.</p> -->
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="./images/utilizando_github.png" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<!-- <h5>Third slide label</h5>
+								<p>Some representative placeholder content for the third slide.</p> -->
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="./images/wampserver.png" class="d-block w-100" alt="...">
+								<div class="carousel-caption d-none d-md-block">
+									<!-- <h5>Fourth slide label</h5>
+								<p>Some representative placeholder content for the fourth slide.</p> -->
+								</div>
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</section>
 		<!-- Three -->
 		<section id="three">
+			<br><br>
 			<div class="container">
 				<h3>A Few Accomplishments</h3>
 				<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non.
