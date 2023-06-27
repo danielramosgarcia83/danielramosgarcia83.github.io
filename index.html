@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 		crossorigin="anonymous"></script>
@@ -16,7 +17,7 @@
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 4.5em);
-		width: 45em;
+		width: 55em;
 	}
 </style>
 
@@ -48,8 +49,10 @@
 				<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
 				<!-- <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
-				<li><a href="https://github.com/danielramosgarcia83" class="icon brands fa-github"><span class="label">Github</span></a></li>
-				<li><a href="https://www.linkedin.com/in/daniel-ramos1983/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/danielramosgarcia83" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				<li><a href="https://www.linkedin.com/in/daniel-ramos1983/" class="icon brands fa-linkedin"><span
+							class="label">LinkedIn</span></a></li>
 
 			</ul>
 		</footer>
@@ -68,26 +71,24 @@
 				</div>
 				<div class="container">
 					<header class="major">
-						<h2>Sobre mí</h2>
-						<p>Programador Back-end | PHP, MySQL</p>
+						<div style="display: flex;flex-direction: column;">
+							<h2>Sobre mí</h2>
+							<h1>Programador Back-end | PHP, MySQL</h1>
+							<a id="corto" href="#" onclick="mostrar()">Leer más...</a>
+						</div>
 					</header>
-					<p style="text-align: justify">Soy un programador Back-End dedicado, especializado en PHP y MySQL,
-						con una sólida formación en
-						contabilidad. Me gradué como Licenciado en Contabilidad de la Universidad de Carabobo,
-						Venezuela, y cuento con más de diez (10) años de experiencia laboral en el campo contable.</p>
-					<p style="text-align: justify">Durante mi trayectoria, he tenido la oportunidad de combinar mis
-						habilidades en contabilidad con
-						mi pasión por la programación. Mi enfoque principal se encuentra en el ámbito de la informática,
-						donde he desarrollado competencias destacadas en el desarrollo de aplicaciones web y el diseño
-						de bases de datos utilizando tecnologías como PHP y MySQL.</p>
-					<p style="text-align: justify">A lo largo de mis diez años de experiencia en el campo de la
-						contabilidad, he utilizado mis
-						habilidades informáticas para optimizar la eficiencia y la precisión de los procesos contables,
-						aplicando herramientas y software especializado.</p>
-					<p style="text-align: justify">Estoy constantemente actualizándome en las últimas tendencias y
-						mejores prácticas en el
-						desarrollo de software, lo que me permite ofrecer soluciones eficientes y de alta calidad.</p>
-					</p>
+					<div style="margin-top: 5%;">
+						<p id="largo" style="text-align: justify; display: none;">Soy un apasionado programador Back-End
+							especializado en PHP y MySQL, dedicado al desarrollo de aplicaciones web y diseño de bases
+							de datos. Además, poseo una licenciatura en contabilidad, lo cual me otorga una valiosa
+							perspectiva para resolver problemas y optimizar procesos. Constantemente me esfuerzo por
+							mantenerme actualizado en las últimas tendencias y mejores prácticas en el desarrollo de
+							software, con el objetivo de ofrecer soluciones innovadoras y cumplir con los más altos
+							estándares de calidad. Me considero un aprendiz constante, siempre en búsqueda de mejorar
+							mis habilidades técnicas y estar al tanto de las nuevas tecnologías y herramientas que
+							pueden enriquecer mi labor como programador Back-End.<a href="#" onclick="ocultar()">Leer
+								menos...</a></p>
+					</div>
 					<h2>Tecnologías utilizadas en los proyectos</h2>
 				</div>
 			</section>
@@ -98,11 +99,13 @@
 						<img style="width:10%;" src="./images/python.svg" alt="" srcset="">
 						<img style="width:10%;" src="./images/MySQL.svg" alt="" srcset="">
 						<img style="width:10%;" src="./images/docker.svg" alt="" srcset="">
+						<img style="width:10%;" src="./images/GitHub-Mark.png" alt="Logotipo de GitHub" srcset="">
 						<img style="width:10%;" src="./images/bootstrap.svg" alt="" srcset="">
 						<img style="width:10%;" src="./images/jquery.svg" alt="" srcset="">
 						<img style="width:10%;" src="./images/html5.svg" alt="" srcset="">
 						<img style="width:10%;" src="./images/css.svg" alt="" srcset="">
 						<img style="width:10%;" src="./images/grafana.svg" alt="" srcset="">
+
 					</ul>
 				</div>
 		</div>
@@ -221,7 +224,8 @@
 								alt="" /></a>
 						<div class="inner">
 							<h4>Proyecto Biblioteca Web</h4>
-							<p style="text-align: justify">A diferencia de BOOKBUSTERS, que fue un proyecto grupal, del curso, donde hubo una previa
+							<p style="text-align: justify">A diferencia de BOOKBUSTERS, que fue un proyecto grupal, del
+								curso, donde hubo una previa
 								planificación de la maquetación, BBDD y respetando las exigencias de los docentes que
 								han dirigido el proyecto, esto viene a ser, mi propia versión, aún en proceso de
 								desarrollo, incluyendo también mecanismos de seguridad como la autenticación de usuarios
@@ -611,7 +615,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</section>
 
 	</div>
+	<script>
+		function mostrar() {
+			$('#corto').fadeOut('slow', function () {
+				$('#largo').fadeIn('slow');
+			});
+		}
 
+		function ocultar() {
+			$('#largo').fadeOut('slow', function () {
+				$('#corto').fadeIn('slow');
+			});
+		}
+	</script>
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
